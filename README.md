@@ -1,8 +1,4 @@
-log4jx 
-[![Build Status](https://secure.travis-ci.org/gynmi/log4jx.png?branch=master)](http://travis-ci.org/gynmi/log4jx)
-==================
-
-`log4js-node` のログ出力にファイル名、関数名、行番号、列番号を付加します。
+##log4jx 
 
 Example
 ---------
