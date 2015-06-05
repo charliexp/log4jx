@@ -1,15 +1,5 @@
 ##log4jx 
 
-Example
----------
-```
-//->[2014-02-18 12:24:14.238] [INFO] category - log4jx-test <anonymous> (loggerTest.js:57:9)
-//->[2015-06-05 23:20:43.767] [INFO] category - 测试内容 [getAllCount] (loggerTest.js:12:10)
-//->[2015-06-05 23:20:43.771] [DEBUG] category - 测试内容 [getAllCount] (loggerTest.js:13:10)
-//->[2015-06-05 23:20:43.772] [WARN] category - 测试内容 [getAllCount] (loggerTest.js:14:10)
-//->[2015-06-05 23:20:43.772] [ERROR] category - 测试内容 [getAllCount] (loggerTest.js:15:10)
-```
-
 Installation
 ---------
 ```
@@ -29,6 +19,16 @@ log4jx(log4js, {
 
 var logger = log4js.getLogger("category");
 logger.info("log4jx-test");
+```
+
+Result
+---------
+```js
+//->[2014-02-18 12:24:14.238] [INFO] category - log4jx-test <anonymous> (loggerTest.js:57:9)
+//->[2015-06-05 23:20:43.767] [INFO] category - 测试内容 [getAllCount] (loggerTest.js:12:10)
+//->[2015-06-05 23:20:43.771] [DEBUG] category - 测试内容 [getAllCount] (loggerTest.js:13:10)
+//->[2015-06-05 23:20:43.772] [WARN] category - 测试内容 [getAllCount] (loggerTest.js:14:10)
+//->[2015-06-05 23:20:43.772] [ERROR] category - 测试内容 [getAllCount] (loggerTest.js:15:10)
 ```
 
 Options
