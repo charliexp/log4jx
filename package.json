@@ -1,0 +1,21 @@
+{
+  "name": "log4jx",
+  "version": "0.0.1",
+  "description": "Extend of Log4js to work with node.",
+  "keywords": [
+    "logger",
+    "log",
+    "log4j",
+    "node"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gynmi/log4jx.git"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "dependencies": {
+    "log4js": "*"
+  }
+}
