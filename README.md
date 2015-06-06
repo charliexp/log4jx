@@ -99,4 +99,4 @@ default: `"[@date] [@level] @category - @data [@method] (@file:@line:@column)"`
 
 License
 ---------
-Version 0.0.1
+Version 0.0.3
