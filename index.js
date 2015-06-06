@@ -40,7 +40,7 @@ function extend(log4js) {
   ["trace", "debug", "info", "warn", "error", "fatal"].forEach(function (method) {
     var original = logger.constructor.prototype[method];
     logger.constructor.prototype[method] = function log() {
-      var args = [].slice.call(arguments);
+      var args = [''].concat([].slice.call(arguments));
       var trace = getTrace(log);
       args.push(colorize(format(trace, exports.format.split('@data')[1]), colours[method.toUpperCase()]));
       return original.apply(this, args);
@@ -156,7 +156,7 @@ exports = module.exports = function (log4js, options) {
 
   // init
   exports.path = null;
-  exports.format = "[@date] [@level] @category - @data [@method] (@file:@line:@column)";
+  exports.format = "[@date] [@level] @category -@data [@method] (@file:@line:@column)";
 
   if (options && options.format) {
     var dataIndex = options.format.indexOf('@data');

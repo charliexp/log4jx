@@ -26,7 +26,7 @@ var log4jx = require("log4jx");
 /// 只需要添加4～5行代码就可以拥有追踪输出代码的功能, 还犹豫什么, 把星星点亮吧
 log4jx(log4js, {
   path  : __dirname,
-  format: "[@date] [@level][@pid][@worker] @category - @data (@file:[@method]:@line:@column)"
+  format: "[@date] [@level][@pid][@worker] @category -@data (@file:[@method]:@line:@column)"
 });
 
 log4js.configure({
@@ -83,7 +83,7 @@ default: `null`
 ### format
 输出格式
 
-default: `"[@date] [@level] @category - @data [@method] (@file:@line:@column)"`
+default: `"[@date] [@level] @category -@data [@method] (@file:@line:@column)"`
 
 #### 以下全部参数说明:
 * @name     : 函数名

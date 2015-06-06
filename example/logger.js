@@ -3,7 +3,7 @@ var log4jx = require("../log4jx");
 
 log4jx(log4js, {
   path         : __dirname,
-  format: "[@date] [@level][@pid][@worker] @category - @data (@file:[@method]:@line:@column)"
+  format: "[@date] [@level][@pid][@worker] @category -@data (@file:[@method]:@line:@column)"
 });
 
 log4js.configure({
