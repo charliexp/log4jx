@@ -63,9 +63,12 @@ function prepareStackTrace(error, structuredStackTrace) {
 }
 
 function getTrace(caller) {
+  var original = Error.prepareStackTrace;
   var error = {};
   Error.captureStackTrace(error, caller || getTrace);
   Error.prepareStackTrace = prepareStackTrace;
+  var stack = error.stack;
+  Error.prepareStackTrace = original;
   return error.stack;
 }
 
