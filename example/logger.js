@@ -1,36 +1,40 @@
-var log4js = require("log4js");
-var log4jx = require("../log4jx");
+var log4jx = require("../index");
 
-log4jx(log4js, {
-  path         : __dirname,
-  format: "[@date] [@level][@pid][@worker] @category -@data (@file:[@method]:@line:@column)"
+/// set output format
+var log4js = log4jx({
+  path  : __dirname,
+  format: "[@date] [@level][@pid][@port][@memory][@worker] @category -@data (@file:[@method]:@line:@column)"
 });
 
-log4js.configure({
-  appenders     : [
-    {
-      type: 'console'
-    }
-  ],
-  replaceConsole: true
-});
+/// set port number if you need `@port` tag
+process.port = 3000;
 
-function getLogger(name, level) {
-  var dateFileLog = log4js.getLogger(name);
-  level = level || log4js.levels.INFO;
-  dateFileLog.setLevel(level);
-  return dateFileLog;
-}
-
-var logger = getLogger("category", 'DEBUG');
+/**
+ * default log4js configure
+ * customize your configuration
+ *
+ * log4js.configure({
+ *    appenders     : [
+ *      {
+ *        type: 'console'
+ *      }
+ *    ],
+ *    replaceConsole: true
+ * });
+ */
+//log4js.configure({
+//  appenders     : [
+//    {
+//      type: 'console'
+//    }
+//  ],
+//  replaceConsole: false
+//});
 
 function getApple() {
-  console.log("测试内容console");
-  logger.info("测试内容0");
-  logger.debug("测试内容1");
-  logger.debug("测试内容1", {name:"tom"},{age1:100});
-  logger.warn("测试内容2");
-  logger.error("测试内容3");
+  console.log("test console");
+
+  //->[2015-06-06 14:01:31.288] [I][36386][3000][20M][ M ] console - test console  (loggerTest.js:[getApple]:48:10)
 }
 
 getApple();
