@@ -1,6 +1,6 @@
 {
   "name": "log4jx",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Extend of Log4js to work with node.",
   "authors": "gynmi",
   "keywords": [
