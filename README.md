@@ -2,6 +2,7 @@
 ---------
 
 [中文文档](https://github.com/gynmi/log4jx/blob/master/README_CN.md)
+
 `log4js-node` extend
 This module is to learn from the `log4js-node-extend` module
 

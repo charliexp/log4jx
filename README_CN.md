@@ -2,6 +2,7 @@
 ---------
 
 [English Documents](https://github.com/gynmi/log4jx)
+
 `log4js-node` 扩展
 此模块是借鉴`log4js-node-extend`模块, 再添加一些自主想法
 
